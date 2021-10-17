@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem Statement 2</title>
+    <style>
+        h1{
+        font_family:Times New Roman;
+        color:#00008B;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Program to find the maximum and minimum element in an array</h1>
+    </header>
+    <hr />
+
+    <article>
+        <hr />
+
+        <section>
+        <h3>Code</h3>
+        <code>
+            <pre>
+                <p>
+                    #include <stdio.h>
+                    #define MAX_SIZE 100   // Maximum array size
+                    int main()
+                    {
+                        int arr[MAX_SIZE];
+                        int i, max, min, size;
+                        /* Input size of the array */
+                        printf("Enter size of the array: ");
+                        scanf("%d", &size);
+                        /* Input array elements */
+                        printf("Enter elements in the array: ");
+                        for(i=0; i<size; i++)
+                        {
+                            scanf("%d", &arr[i]);
+                        }
+                        /* Assume first element as maximum and minimum */
+                        max = arr[0];
+                        min = arr[0];
+                        /*Find maximum and minimum in all array elements. */
+                        for(i=1; i<size; i++)
+                        {
+                            /* If current element is greater than max */
+                            if(arr[i] > max)
+                            {
+                                max = arr[i];
+                            }
+                            /* If current element is smaller than min */
+                            if(arr[i] < min)
+                            {
+                                min = arr[i];
+                            }
+                        }
+                        /* Print maximum and minimum element */
+                        printf("Maximum element = %d\n", max);
+                        printf("Minimum element = %d", min);
+                        return 0;
+                    }
+                </p>
+
+            </pre>
+
+        </code>
+        </section>
+        <hr />
+
+        <section>
+            <h3>Sample input</h3>
+            <kbd>Enter size of the array: 5<br>
+            Enter elements in the array: 23 34 42 21 22
+            </kbd>
+            <h3>Sample output</h3>
+            <samp>output: Maximum element = 42<br>
+            Minimum element = 21<samp>
+	    <h2><b>Complexity</b></h3>
+	    <p>Time Complexity: O(n)</p>
+        </section>
+
+        <section>
+            <h3>Variable used in the program</h3>
+            <var>arr, </var><var>i, </var><var>max, </var><var>min, </var><var>size</var>
+        </section>
+    </article>
+    <hr />
+
+    <footer>
+        <h4>
+            Algorithm to find the maximum and minimum element in an array:
+            <br></h4>
+
+                <a
+                href="https://makeinjava.com/find-maximum-minimum-element-array-java-example/#:~:text=Given%20an%20array%20of%20integers%20%2C%20find%20out,Maximum%20value%20in%20array%20%25s%20%22%2CsArray%29%3B%20System.out.printf%20%28%222.">Click here</a>
+
+
+    </footer>
+</body>
+
+</html>
